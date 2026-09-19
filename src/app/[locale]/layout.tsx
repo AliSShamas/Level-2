@@ -1,10 +1,13 @@
 import type {ReactNode} from 'react';
 import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 
 import {routing} from '@/i18n/routing';
 
 import '@/app/globals.css';
+import BackToTop from '@/components/common/BackToTop';
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -32,7 +35,10 @@ export default async function LocaleLayout({
     >
       <body>
         <NextIntlClientProvider>
+          <Header/>
           {children}
+          <Footer/>
+          <BackToTop/>
         </NextIntlClientProvider>
       </body>
     </html>
