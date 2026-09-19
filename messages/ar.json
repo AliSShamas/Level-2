@@ -1,5 +1,43 @@
 {
   "HomePage": {
     "title": "منصة النمو - المستوى الثاني"
-  }
+  },
+"Navigation": {
+  "brand": "منصة النمو",
+  "switchToArabic": "العربية",
+  "switchToEnglish": "الإنجليزية",
+  "search": "بحث",
+  "openMenu": "فتح القائمة",
+  "closeMenu": "إغلاق القائمة",
+  "coaching": "التدريب الفردي",
+  "consulting": "الاستشارات",
+  "training": "التدريب",
+  "about": "من نحن",
+  "media": "المركز الإعلامي",
+  "contact": "تواصل معنا",
+  "backToTop": "العودة إلى الأعلى",
+    "searchTitle": "بحث",
+"searchPlaceholder": "عن ماذا تبحث؟",
+"closeSearch": "إغلاق البحث",
+"searchHint": "ابدأ بالكتابة للبحث في الموقع."
+},"Footer": {
+  "brand": "منصة النمو",
+  "description": "الهدف. الشجاعة. النمو.",
+  "categories": "الفئات",
+  "coaching": "الكوتشينغ",
+  "training": "التدريب",
+  "consulting": "الاستشارات",
+  "quickLinks": "روابط سريعة",
+  "about": "من نحن",
+  "contact": "تواصل معنا",
+  "mediaCenter": "المركز الإعلامي",
+  "resources": "الموارد",
+  "podcasts": "البودكاست",
+  "articles": "المقالات",
+  "videos": "الفيديوهات",
+  "reachUs": "تواصل معنا",
+  "email": "hello@example.com",
+  "copyright": "© 2026 منصة النمو. جميع الحقوق محفوظة."
+
+}
 }

@@ -1,5 +1,42 @@
 {
   "HomePage": {
     "title": "Level 2 Growth Platform"
-  }
+  },
+"Navigation": {
+  "brand": "Growth Platform",
+  "switchToArabic": "Arabic",
+  "switchToEnglish": "English",
+  "search": "Search",
+  "openMenu": "Open menu",
+  "closeMenu": "Close menu",
+  "coaching": "Coaching",
+  "consulting": "Consulting",
+  "training": "Training",
+  "about": "About",
+  "media": "Media Center",
+  "contact": "Contact",
+  "searchTitle": "Search",
+  "backToTop": "Back to top",
+"searchPlaceholder": "What are you looking for?",
+"closeSearch": "Close search",
+"searchHint": "Start typing to search the site."
+},"Footer": {
+  "brand": "Growth Platform",
+  "description": "Purpose. Courage. Growth.",
+  "categories": "Categories",
+  "coaching": "Coaching",
+  "training": "Training",
+  "consulting": "Consulting",
+  "quickLinks": "Quick Links",
+  "about": "About",
+  "contact": "Contact",
+  "mediaCenter": "Media Center",
+  "resources": "Resources",
+  "podcasts": "Podcasts",
+  "articles": "Articles",
+  "videos": "Videos",
+  "reachUs": "Reach Us",
+  "email": "hello@example.com",
+  "copyright": "© 2026 Growth Platform. All rights reserved."
+}
 }
