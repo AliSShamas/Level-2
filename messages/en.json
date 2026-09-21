@@ -1,6 +1,63 @@
 {
   "HomePage": {
-    "title": "Level 2 Growth Platform"
+    "title": "Level 2 Growth Platform",
+    "hero": {
+  "title": "Empowering Growth at Every Level",
+  "description": "From individuals to organizations, we provide coaching, consulting, and training designed to unlock potential, strengthen leadership, and drive meaningful transformation."
+},"intro": {
+  "title": "One belief guides everything we do: growth becomes possible with the right support.",
+  "description": "We work with individuals, teams, and organizations to build clarity, strengthen leadership, and create meaningful change through coaching, consulting, and training.",
+  "cta": "Start a Conversation"
+},"aboutPreview": {
+  "eyebrow": "About Growth Platform",
+  "title": "Growth is not accidental. It starts with clarity, courage, and the right support.",
+  "description": "Growth Platform brings together coaching, consulting, and training to help people and organizations understand where they are, decide where they want to go, and move forward with purpose.",
+  "belief": "We believe meaningful growth begins when reflection turns into intentional action.",
+  "cta": "Read Our Story"
+},
+"pillars": {
+  "eyebrow": "How We Support Growth",
+  "title": "Three paths. One purpose.",
+  "description": "Whether the need is personal, organizational, or developmental, each path is designed to create meaningful progress.",
+  "learnMore": "Explore",
+  "coaching": {
+    "title": "Coaching",
+    "description": "One-to-one conversations that create clarity, strengthen self-awareness, and help turn intention into action."
+  },
+  "consulting": {
+    "title": "Consulting",
+    "description": "Strategic support for organizations facing complex challenges, transitions, and opportunities for growth."
+  },
+  "training": {
+    "title": "Training",
+    "description": "Practical learning experiences that strengthen skills, leadership, communication, and professional effectiveness."
+  }
+},"mediaPreview": {
+  "eyebrow": "Ideas Worth Your Time",
+  "title": "Read. Watch. Listen.",
+  "description": "Explore ideas, conversations, and practical insights designed to support meaningful growth.",
+  "all": "All",
+  "article": "Articles",
+  "podcast": "Podcasts",
+  "video": "Videos",
+  "explore": "Explore",
+  "viewAll": "Explore Media Center",
+  "items": {
+    "growthThroughReflection": {
+      "title": "Growth Through Reflection",
+      "excerpt": "Why meaningful progress often begins by slowing down long enough to understand where you are."
+    },
+    "leadingWithClarity": {
+      "title": "Leading With Clarity",
+      "excerpt": "A conversation about better decisions, stronger leadership, and creating direction in uncertain situations."
+    },
+    "buildingResilientTeams": {
+      "title": "Building Resilient Teams",
+      "excerpt": "Practical ideas for developing teams that communicate, adapt, and perform effectively together."
+    }
+  }
+}
+
   },
 "Navigation": {
   "brand": "Growth Platform",

@@ -38,8 +38,12 @@ export default function BackToTop() {
       type="button"
       onClick={scrollToTop}
       aria-label={t('backToTop')}
-      className="fixed bottom-6 end-6 z-40 flex size-14 items-center justify-center rounded-xl bg-slate-900 text-white shadow-lg transition hover:-translate-y-1 hover:bg-slate-800"
-    >
+      className="fixed bottom-6 end-6 z-40
+  flex size-14 items-center justify-center
+  rounded-xl bg-slate-900 text-white shadow-lg
+  transition duration-200
+  hover:opacity-75
+  active:opacity-60">
       <ArrowUp className="size-6" />
     </button>
   );

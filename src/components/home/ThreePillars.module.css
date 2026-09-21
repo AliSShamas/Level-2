@@ -1,0 +1,147 @@
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.coaching {
+  --pillar-color: #1d4ed8;
+  --pillar-tint: #eff6ff;
+}
+
+.consulting {
+  --pillar-color: #0f766e;
+  --pillar-tint: #f0fdfa;
+}
+
+.training {
+  --pillar-color: #c2410c;
+  --pillar-tint: #fff7ed;
+}
+
+.card {
+  display: flex;
+  min-height: 26.25rem;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: var(--pillar-color);
+  color: #fff;
+  transition: min-height 300ms ease, background-color 300ms ease,
+    color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--pillar-color);
+  outline-offset: 5px;
+}
+
+.icon {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 16%);
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.description {
+  margin-top: 1.25rem;
+  color: rgb(255 255 255 / 90%);
+  line-height: 1.75;
+  transition: color 300ms ease;
+}
+
+.action {
+  margin-top: auto;
+  padding-top: 2rem;
+  /* Keep a stable button size throughout the reveal. */
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: #fff;
+  color: var(--pillar-color);
+  font-weight: 700;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .card {
+    padding: 2rem;
+  }
+}
+
+/* Touch devices keep the action visible, regardless of viewport width. */
+@media (min-width: 48rem) and (hover: hover) and (pointer: fine) {
+  .grid {
+    /* Reserve the expanded height so the next section stays in place. */
+    grid-auto-rows: minmax(31.25rem, auto);
+  }
+
+  .action {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  .card:is(:hover, :focus-visible) {
+    min-height: 31.25rem;
+    border-color: var(--pillar-tint);
+    background: #fff;
+    color: #0f172a;
+    box-shadow: 0 20px 45px -18px rgb(15 23 42 / 25%);
+  }
+
+  .card:is(:hover, :focus-visible) .icon {
+    background: var(--pillar-tint);
+    color: var(--pillar-color);
+  }
+
+  .card:is(:hover, :focus-visible) .description {
+    color: #475569;
+  }
+
+  .card:is(:hover, :focus-visible) .action {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card:is(:hover, :focus-visible) .button {
+    background: var(--pillar-color);
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .icon,
+  .description,
+  .action,
+  .button {
+    transition: none;
+  }
+
+  .action {
+    transform: none;
+  }
+}
