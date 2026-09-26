@@ -1,0 +1,139 @@
+.page {
+  --coaching-accent: #245c7a;
+  --coaching-ink: #173e55;
+  --coaching-soft: #edf5fa;
+  background: #fff;
+  color: #475569;
+}
+
+.hero {
+  background: linear-gradient(135deg, #f0f7fb, #fff 80%);
+}
+
+.softSection {
+  background: var(--coaching-soft);
+}
+
+.heading {
+  color: var(--coaching-ink);
+  text-wrap: balance;
+}
+
+.eyebrow {
+  color: var(--coaching-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: var(--coaching-accent);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 0.875rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--coaching-accent);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.button:hover {
+  background: var(--coaching-ink);
+  box-shadow: 0 6px 18px rgb(23 62 85 / 15%);
+}
+
+.button:focus-visible,
+.textLink:focus-visible,
+.breadcrumb a:focus-visible {
+  outline: 3px solid #5388a5;
+  outline-offset: 5px;
+}
+
+.textLink {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--coaching-accent);
+  font-weight: 600;
+  text-underline-offset: 0.3rem;
+}
+
+.textLink:hover {
+  text-decoration: underline;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #dceaf2;
+}
+
+.heroPhoto {
+  border: 0.5rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px -30px rgb(36 92 122 / 30%);
+}
+
+.icon {
+  display: flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.875rem;
+  background: #dfedf7;
+  color: var(--coaching-accent);
+}
+
+.step {
+  height: 100%;
+  border: 1px solid #dce8ef;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  background: #fff;
+  transition: border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.step:hover {
+  border-color: #adcbdc;
+  box-shadow: 0 12px 28px -18px rgb(36 92 122 / 25%);
+}
+
+.invitation {
+  border-radius: 1.75rem;
+  background: var(--coaching-ink);
+  color: #fff;
+}
+
+.invitation .button {
+  background: #fff;
+  color: var(--coaching-ink);
+}
+
+.invitation .button:hover {
+  background: #e7f2f9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .step {
+    transition: none;
+  }
+}

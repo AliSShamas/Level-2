@@ -1,4 +1,72 @@
-{
+{"CoachingPage": {
+  "hero": {
+    "eyebrow": "Coaching",
+    "title": "Create space for clarity, growth, and meaningful change.",
+    "description": "Coaching offers a focused space to reflect, challenge assumptions, and move forward with greater intention.",
+    "cta": "Start the Conversation",
+    "home": "Home",
+    "breadcrumbLabel": "Breadcrumb",
+    "explore": "Explore coaching",
+    "imageAlt": "Two professionals having a thoughtful conversation in a bright, welcoming room.",
+    "imageCaption": "A little space. A clearer perspective."
+  },"whoThisIsFor": {
+  "eyebrow": "Who This Is For",
+  "title": "Coaching for moments that call for clarity and growth.",
+  "description": "This work is designed for people who want to better understand where they are, where they want to go, and what may be standing in the way.",
+  "imageAlt": "A notebook and pen beside a sunlit window, ready for reflection.",
+  "reflection": "You do not need to have it all figured out to begin.",
+  "professionals": {
+    "title": "Professionals",
+    "description": "For professionals who want to grow with greater confidence, focus, and purpose."
+  },
+  "leaders": {
+    "title": "Leaders",
+    "description": "For leaders navigating responsibility, relationships, communication, and change."
+  },
+  "transition": {
+    "title": "People in Transition",
+    "description": "For those moving through career shifts, new roles, or important personal decisions."
+  },
+  "clarity": {
+    "title": "Those Seeking Clarity",
+    "description": "For anyone who feels stuck, uncertain, or ready to explore a different way forward."
+  }
+},
+  "whatToExpect": {
+    "eyebrow": "What to Expect",
+    "title": "Space to think. Support to move forward.",
+    "description": "Coaching is a <strong>conversation with purpose</strong>. It offers time to step back, look at things differently, and understand what matters most to you.",
+    "approach": "You bring what is on your mind. Together, we explore it through <strong>thoughtful questions, honest reflection, and practical next steps</strong>.",
+    "focus": "The work is shaped around <strong>your goals, your pace, and your context</strong>. We make room to notice patterns, explore assumptions, and turn greater awareness into intentional steps in your life and work.",
+    "imageAlt": "An overhead view of two people sharing a conversation around a table with a notebook and cups."
+  },
+  "process": {
+    "eyebrow": "The Coaching Process",
+    "title": "A starting point, shaped around you.",
+    "description": "Every coaching relationship begins with a conversation. From there, we find a focus and a way of working that makes sense for your goals.",
+    "discovery": {
+      "title": "Start with a conversation",
+      "description": "Share what brings you here, ask your questions, and explore whether coaching feels like the right fit."
+    },
+    "direction": {
+      "title": "Choose a direction together",
+      "description": "Clarify what you want to work toward and discuss an approach that fits your priorities and circumstances."
+    },
+    "sessions": {
+      "title": "Make space for the work",
+      "description": "Use focused conversations to reflect, challenge familiar patterns, and identify meaningful steps forward."
+    },
+    "progress": {
+      "title": "Reflect on what comes next",
+      "description": "Notice what is changing, review what you are learning, and decide together where to go from here."
+    },
+    "invitation": {
+      "title": "Your next step can start with a conversation.",
+      "description": "Tell us a little about where you are and what you would like to explore.",
+      "cta": "Let's talk"
+    }
+  }
+},
   "HomePage": {
     "title": "Level 2 Growth Platform",
     "hero": {
