@@ -16,26 +16,24 @@ export default function Header() {
     <HeaderFrame>
       <div
         className="
-          mx-auto grid max-w-7xl
-          grid-cols-[1fr_auto_1fr]
-          items-center gap-4
-          px-4 py-7
-          transition-all duration-300
-          group-data-[scrolled=true]/header:py-3
-          sm:px-6
+          mx-auto grid max-w-[90rem]
+          grid-cols-[auto_1fr] sm:grid-cols-[1fr_auto_1fr]
+          items-center gap-2 sm:gap-4
+          px-4 py-4
+          transition-[padding] duration-300 ease-out
+          group-data-[scrolled=true]/header:py-2
+          sm:px-6 lg:px-8
         "
       >
         {/* Left side: social links */}
-        <div className="min-w-0 justify-self-start">
-          <div className="hidden sm:block">
-            <SocialLinks />
-          </div>
+        <div className="hidden min-w-0 justify-self-start sm:block">
+          <SocialLinks variant="header" />
         </div>
 
         {/* Center: logo + brand */}
         <Link
           href="/"
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center rounded-md transition-opacity duration-200 ease-out hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700"
         >
           <Image
             src="/images/tree.png"
@@ -44,16 +42,16 @@ export default function Header() {
             height={120}
             priority
             className="
-              h-auto w-36
-              transition-all duration-300
-              group-data-[scrolled=true]/header:w-24
+              h-auto w-24 sm:w-32
+              transition-[width] duration-300 ease-out
+              group-data-[scrolled=true]/header:w-20
             "
           />
 
           <span
             className="
               mt-1 text-center text-sm font-semibold
-              transition-all duration-300
+              transition-[font-size] duration-300 ease-out
               group-data-[scrolled=true]/header:text-xs
             "
           >
@@ -62,7 +60,7 @@ export default function Header() {
         </Link>
 
         {/* Right side: language, search, hamburger */}
-        <div className="flex items-center gap-3 justify-self-end sm:gap-4">
+        <div className="flex items-center gap-1 justify-self-end text-green-700 sm:gap-3 lg:gap-5">
           <LanguageSwitcher />
           <SearchOverlay />
           <NavigationMenu />

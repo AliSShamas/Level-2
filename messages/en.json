@@ -2,6 +2,7 @@
   "HomePage": {
     "title": "Level 2 Growth Platform",
     "hero": {
+  "cta": "Start a Conversation",
   "title": "Empowering Growth at Every Level",
   "description": "From individuals to organizations, we provide coaching, consulting, and training designed to unlock potential, strengthen leadership, and drive meaningful transformation."
 },"intro": {
@@ -56,8 +57,53 @@
       "excerpt": "Practical ideas for developing teams that communicate, adapt, and perform effectively together."
     }
   }
+},"testimonials": {
+  "eyebrow": "Testimonials",
+  "title": "Stories of growth and progress.",
+  "description": "Real experiences from people who chose to reflect, develop, and move forward.",
+  "clarity": {
+    "quote": "The conversations helped me understand what was really holding me back and move forward with much more clarity.",
+    "name": "Education Professional",
+    "location": "Lebanon"
+  },
+  "leadership": {
+    "quote": "I learned to approach leadership with more trust, better communication, and greater confidence in my team.",
+    "name": "Team Leader",
+    "location": "UAE"
+  },
+  "confidence": {
+    "quote": "What once felt overwhelming became much easier to understand when I learned to focus on what I could control.",
+    "name": "Working Professional",
+    "location": "Jordan"
+  },
+  "growth": {
+    "quote": "The biggest change was not in my circumstances, but in how I understood myself and the choices available to me.",
+    "name": "Coaching Client",
+    "location": "Lebanon"
+  }
+},"contact": {
+  "eyebrow": "Let's Talk",
+  "title": "Have something in mind? Let's start a conversation.",
+  "description": "Whether you are exploring coaching, consulting, or training, we would be glad to hear what you are working toward.",
+  "emailLabel": "Email",
+  "phoneLabel": "Phone",
+  "phoneValue": "Available upon request",
+  "socialLabel": "Connect with us",
+  "name": "Name",
+  "namePlaceholder": "Your name",
+  "email": "Email",
+  "emailPlaceholder": "you@example.com",
+  "phone": "Phone",
+  "phonePlaceholder": "Your phone number",
+  "interest": "Area of interest",
+  "interestPlaceholder": "Choose an option",
+  "coaching": "Coaching",
+  "consulting": "Consulting",
+  "training": "Training",
+  "message": "Message",
+  "messagePlaceholder": "Tell us a little about what you are looking for...",
+  "submit": "Send Inquiry"
 }
-
   },
 "Navigation": {
   "brand": "Growth Platform",

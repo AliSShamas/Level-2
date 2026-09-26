@@ -1,13 +1,18 @@
 import type {ReactNode} from 'react';
+import {Manrope, Noto_Sans_Arabic} from 'next/font/google';
 import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
+import ScrollAnimations from '@/components/common/ScrollAnimations';
 
 import {routing} from '@/i18n/routing';
 
 import '@/app/globals.css';
 import BackToTop from '@/components/common/BackToTop';
+
+const latinFont = Manrope({subsets: ['latin'], display: 'swap', variable: '--font-latin'});
+const arabicFont = Noto_Sans_Arabic({subsets: ['arabic'], display: 'swap', variable: '--font-arabic'});
 
 interface LocaleLayoutProps {
   children: ReactNode;
@@ -33,11 +38,13 @@ export default async function LocaleLayout({
       lang={locale}
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
     >
-      <body>
+      <body className={`${latinFont.variable} ${arabicFont.variable}`}>
         <NextIntlClientProvider>
           <Header/>
-          {children}
-          <Footer/>
+          <ScrollAnimations>
+            {children}
+            <Footer/>
+          </ScrollAnimations>
           <BackToTop/>
         </NextIntlClientProvider>
       </body>

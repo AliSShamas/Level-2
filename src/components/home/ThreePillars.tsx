@@ -32,9 +32,9 @@ export default function ThreePillars() {
   const t = useTranslations('HomePage.pillars');
 
   return (
-    <section className="bg-white px-6 py-20 md:py-28">
+    <section data-reveal-group className="bg-white px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
+        <div data-reveal className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">
             {t('eyebrow')}
           </p>
@@ -53,7 +53,7 @@ export default function ThreePillars() {
             const Icon = pillar.icon;
 
             return (
-              <article key={pillar.key} className={styles[pillar.key]}>
+              <article data-reveal key={pillar.key} className={styles[pillar.key]}>
                 <Link
                   href={pillar.href}
                   aria-labelledby={`pillar-${pillar.key}`}

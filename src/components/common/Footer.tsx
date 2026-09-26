@@ -10,9 +10,9 @@ export default function Footer() {
   const t = useTranslations('Footer');
 
   return (
-    <footer className="border-t border-green-900/10 bg-[#edf2e8] text-[#294333] [&_a]:transition-colors [&_a:hover]:text-green-700 [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-green-700">
-      <div className="mx-auto grid max-w-[84rem] gap-x-10 gap-y-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))_1.2fr] lg:gap-x-12 lg:[&>div:not(:first-child)]:pt-4">
-        <div className="max-w-64">
+    <footer className="border-t border-green-900/10 bg-[#edf2e8] text-[#294333] [&_a]:transition-[color,opacity,translate] [&_a]:duration-200 [&_a]:ease-out [&_a:hover]:text-green-700 [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-green-700">
+      <div data-reveal-group className="mx-auto grid max-w-[84rem] gap-x-10 gap-y-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(3,minmax(0,1fr))_1.2fr] lg:gap-x-12 lg:[&>div:not(:first-child)]:pt-4">
+        <div data-reveal className="max-w-64">
           <Link href="/" className="inline-flex flex-col items-start gap-5 text-xl font-bold tracking-tight">
             <Image
               src={treeLogo}
@@ -28,7 +28,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div>
+        <div data-reveal>
           <h2 className="font-semibold after:mt-4 after:block after:h-0.5 after:w-10 after:rounded-full after:bg-green-700/50 after:content-['']">
             {t('categories')}
           </h2>
@@ -48,7 +48,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div>
+        <div data-reveal>
           <h2 className="font-semibold after:mt-4 after:block after:h-0.5 after:w-10 after:rounded-full after:bg-green-700/50 after:content-['']">
             {t('quickLinks')}
           </h2>
@@ -68,7 +68,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div>
+        <div data-reveal>
           <h2 className="font-semibold after:mt-4 after:block after:h-0.5 after:w-10 after:rounded-full after:bg-green-700/50 after:content-['']">
             {t('resources')}
           </h2>
@@ -88,7 +88,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div>
+        <div data-reveal>
           <h2 className="font-semibold after:mt-4 after:block after:h-0.5 after:w-10 after:rounded-full after:bg-green-700/50 after:content-['']">
             {t('reachUs')}
           </h2>
