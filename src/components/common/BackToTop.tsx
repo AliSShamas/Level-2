@@ -23,9 +23,13 @@ export default function BackToTop() {
   }, []);
 
   function scrollToTop() {
+    const reduceMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: reduceMotion ? 'instant' : 'smooth'
     });
   }
 
@@ -39,11 +43,13 @@ export default function BackToTop() {
       onClick={scrollToTop}
       aria-label={t('backToTop')}
       className="fixed bottom-6 end-6 z-40
-  flex size-14 items-center justify-center
-  rounded-xl bg-slate-900 text-white shadow-lg
-  transition duration-200
-  hover:opacity-75
-  active:opacity-60">
+        flex size-14 items-center justify-center
+        rounded-xl bg-slate-900 text-white shadow-lg
+        transition-[background-color,box-shadow,translate] duration-200 ease-out
+        hover:bg-green-800 hover:shadow-xl
+        motion-safe:hover:-translate-y-1 motion-safe:active:translate-y-0
+        focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700"
+    >
       <ArrowUp className="size-6" />
     </button>
   );

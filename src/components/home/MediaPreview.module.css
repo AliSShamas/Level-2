@@ -1,0 +1,107 @@
+.item {
+  --action-space: 4.5rem;
+  --reveal-duration: 350ms;
+  --reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  min-width: 0;
+}
+
+.card {
+  display: block;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgb(15 23 42 / 6%);
+  transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+
+.card:focus-visible {
+  outline: 3px solid #15803d;
+  outline-offset: 5px;
+}
+
+.action {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--reveal-duration) var(--reveal-ease),
+    opacity 250ms ease;
+}
+
+.actionInner {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.button {
+  display: inline-flex;
+  height: 3rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  padding-inline: 1.25rem;
+  background: #15803d;
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform var(--reveal-duration) var(--reveal-ease);
+}
+
+/* Touch users see the complete card and action without a hover. */
+@media (hover: hover) and (pointer: fine) {
+  .item {
+    /* Trade this space for the action as it opens, keeping the row steady. */
+    padding-block-end: var(--action-space);
+    transition: padding-block-end var(--reveal-duration) var(--reveal-ease);
+  }
+
+  .item:has(.card:is(:hover, :focus-visible)) {
+    padding-block-end: 0;
+  }
+
+  .card {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .action {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+
+  .button {
+    transform: translateY(0.75rem);
+  }
+
+  .card:is(:hover, :focus-visible) {
+    background: #fff;
+    box-shadow: 0 12px 28px -12px rgb(15 23 42 / 24%),
+      0 3px 8px rgb(15 23 42 / 5%);
+  }
+
+  .card:is(:hover, :focus-visible) .action {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .card:is(:hover, :focus-visible) .button {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .card,
+  .action,
+  .button {
+    transition: none;
+  }
+
+  .button {
+    transform: none;
+  }
+}

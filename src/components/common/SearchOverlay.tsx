@@ -101,9 +101,9 @@ export default function SearchOverlay() {
         aria-label={t('search')}
         aria-expanded={isOpen}
         aria-controls="site-search"
-        className="rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900"
+        className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg text-green-700 transition-[background-color,color,scale] duration-200 ease-out hover:bg-green-50 hover:text-green-900 motion-safe:hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700"
       >
-        <Search className="size-5" />
+        <Search className="size-6" />
       </button>
 
       {isOpen && (
@@ -128,7 +128,7 @@ export default function SearchOverlay() {
                 type="button"
                 onClick={closeSearch}
                 aria-label={t('closeSearch')}
-                className="rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900"
+                className="rounded-md transition-[color,rotate] duration-200 ease-out hover:text-green-700 motion-safe:hover:rotate-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700"
               >
                 <X className="size-6" />
               </button>
@@ -142,7 +142,7 @@ export default function SearchOverlay() {
                   ref={inputRef}
                   type="search"
                   placeholder={t('searchPlaceholder')}
-                  className="w-full border-b border-slate-300 bg-transparent py-5 ps-10 pe-4 text-2xl outline-none transition focus:border-slate-950 md:text-4xl"
+                  className="w-full border-b border-slate-300 bg-transparent py-5 ps-10 pe-4 text-2xl outline-none transition-colors duration-200 ease-out focus:border-slate-950 md:text-4xl"
                 />
               </div>
 

@@ -1,7 +1,8 @@
 .grid {
   display: grid;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
 }
 
 .coaching {
@@ -20,15 +21,19 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   min-height: 26.25rem;
+  height: 100%;
   flex-direction: column;
   border: 1px solid transparent;
   border-radius: 1.5rem;
   padding: 2rem;
   background: var(--pillar-color);
   color: #fff;
-  transition: min-height 300ms ease, background-color 300ms ease,
+  transform-origin: center top;
+  transition: min-height 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1), background-color 300ms ease,
     color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
 }
 
@@ -59,19 +64,23 @@
 .action {
   margin-top: auto;
   padding-top: 2rem;
-  /* Keep a stable button size throughout the reveal. */
-  transition: opacity 300ms ease, transform 300ms ease;
+  transform-origin: center bottom;
+  transition: opacity 250ms ease,
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .button {
-  display: inline-flex;
-  min-height: 3rem;
+  display: flex;
+  width: 100%;
+  min-height: 3.5rem;
   align-items: center;
+  justify-content: space-between;
   gap: 0.75rem;
   border-radius: 0.75rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.25rem;
   background: #fff;
   color: var(--pillar-color);
+  font-size: 1.125rem;
   font-weight: 700;
   transition: background-color 300ms ease, color 300ms ease;
 }
@@ -92,20 +101,15 @@
   }
 }
 
-/* Touch devices keep the action visible, regardless of viewport width. */
-@media (min-width: 48rem) and (hover: hover) and (pointer: fine) {
-  .grid {
-    /* Reserve the expanded height so the next section stays in place. */
-    grid-auto-rows: minmax(31.25rem, auto);
-  }
-
+/* Touch devices keep the action visible without needing a hover. */
+@media (hover: hover) and (pointer: fine) {
   .action {
     opacity: 0;
-    transform: translateY(0.75rem);
+    transform: translateY(1rem) scale(0.96);
   }
 
   .card:is(:hover, :focus-visible) {
-    min-height: 31.25rem;
+    z-index: 1;
     border-color: var(--pillar-tint);
     background: #fff;
     color: #0f172a;
@@ -123,12 +127,42 @@
 
   .card:is(:hover, :focus-visible) .action {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 
   .card:is(:hover, :focus-visible) .button {
     background: var(--pillar-color);
     color: #fff;
+  }
+}
+
+@media (min-width: 48rem) and (hover: hover) and (pointer: fine) {
+  .grid {
+    align-items: start;
+    /* Reserve the expanded height so the following section stays steady. */
+    grid-auto-rows: minmax(31.25rem, auto);
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card:is(:hover, :focus-visible) {
+    min-height: 31.25rem;
+  }
+}
+
+.card:focus-visible {
+  box-shadow: 0 20px 45px -18px rgb(15 23 42 / 25%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:focus-visible { transform: translateY(-6px); }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .card:is(:hover, :focus-visible) {
+    transform: translateY(-8px) scale(1.025);
   }
 }
 

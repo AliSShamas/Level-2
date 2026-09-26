@@ -31,7 +31,8 @@ export default function HeaderFrame({
       className="
         group/header sticky top-0 z-40
         border-b border-slate-200 bg-white
-        transition-all duration-300
+        transition-shadow duration-300 ease-out
+        data-[scrolled=true]:shadow-sm
       "
     >
       {children}
