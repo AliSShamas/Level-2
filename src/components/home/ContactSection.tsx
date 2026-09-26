@@ -8,7 +8,7 @@ export default function ContactSection() {
   const t = useTranslations("HomePage.contact");
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-20 md:py-28">
+    <section id="contact" className="relative scroll-mt-28 overflow-hidden bg-white px-6 py-20 md:py-28">
       {/* Decorative leaf */}
       <div
         aria-hidden="true"
