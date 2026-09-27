@@ -1,7 +1,5 @@
 export const PROGRAMS_PER_PAGE = 6;
 
-// Make search forgiving: ignore case, accents, Arabic vowel marks/tatweel,
-// and common alef/yaa variants. This changes search text, never the displayed copy.
 export function normalizeSearchText(value: string) {
   return value
     .normalize('NFKD')

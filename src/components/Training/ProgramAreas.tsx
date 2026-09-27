@@ -17,8 +17,11 @@ export default function ProgramAreas() {
   const locale = useLocale();
   // Explicit digits prevent server/browser Intl defaults from disagreeing in Arabic.
   const numberOptions = {numberingSystem: locale === 'ar' ? 'arab' : 'latn'};
+
   const [query, setQuery] = useState('');
   const [requestedPage, setRequestedPage] = useState(1);
+
+  
   const headingRef = useRef<HTMLHeadingElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
 
