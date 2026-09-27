@@ -1,0 +1,133 @@
+.page {
+  --consulting-accent: #0f766e;
+  --consulting-ink: #164e58;
+  background: #fff;
+  color: #475569;
+}
+
+.hero {
+  background: linear-gradient(135deg, #f0faf7, #fff 80%);
+}
+
+.softSection {
+  background: #f1f7f5;
+}
+
+.heading {
+  color: var(--consulting-accent);
+  text-wrap: balance;
+}
+
+.breadcrumb a,
+.textLink {
+  color: var(--consulting-accent);
+}
+
+.breadcrumb a:hover,
+.textLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 0.875rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--consulting-ink);
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.button:hover {
+  background: var(--consulting-accent);
+  box-shadow: 0 6px 18px rgb(15 118 110 / 15%);
+}
+
+.button:focus-visible,
+.textLink:focus-visible,
+.breadcrumb a:focus-visible,
+.cardLink:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 5px;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #e2eee9;
+}
+
+.heroPhoto {
+  border: 0.5rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px -30px rgb(22 78 88 / 25%);
+}
+
+.offerCard {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border: 1px solid #e0eae6;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  background: #fff;
+  transition: background-color 250ms ease, border-color 250ms ease,
+    color 250ms ease, box-shadow 250ms ease;
+}
+
+.offerIcon {
+  color: var(--consulting-accent);
+}
+
+.offerTitle,
+.cardLink {
+  color: var(--consulting-ink);
+}
+
+.cardLink {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  font-weight: 700;
+}
+
+.offerCard:focus-within {
+  border-color: #386977;
+  background: #386977;
+  color: #fff;
+  box-shadow: 0 12px 28px -14px rgb(22 78 88 / 30%);
+}
+
+.offerCard:focus-within :is(.offerIcon, .offerTitle, .cardLink) {
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .offerCard:hover {
+    border-color: #386977;
+    background: #386977;
+    color: #fff;
+    box-shadow: 0 12px 28px -14px rgb(22 78 88 / 30%);
+  }
+
+  .offerCard:hover :is(.offerIcon, .offerTitle, .cardLink) {
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .offerCard {
+    transition: none;
+  }
+}

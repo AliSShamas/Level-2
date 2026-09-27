@@ -1,0 +1,209 @@
+.page {
+  --training-accent: #c2410c;
+  --training-ink: #184f6b;
+  background: #fff;
+  color: #475569;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fff7ef, #fff 80%);
+}
+
+.softSection {
+  background: #f5f5f4;
+}
+
+.heading {
+  color: var(--training-accent);
+  text-wrap: balance;
+}
+
+.blueHeading {
+  color: var(--training-ink);
+  text-wrap: balance;
+}
+
+.breadcrumb a,
+.textLink {
+  color: var(--training-ink);
+}
+
+.breadcrumb a:hover,
+.textLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 0.875rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--training-ink);
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.button:hover {
+  background: #123c52;
+  box-shadow: 0 6px 18px rgb(24 79 107 / 15%);
+}
+
+.button:focus-visible,
+.textLink:focus-visible,
+.breadcrumb a:focus-visible,
+.programCard:focus-visible,
+.pagination button:focus-visible {
+  outline: 3px solid var(--training-accent);
+  outline-offset: 5px;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #eee7de;
+}
+
+.heroPhoto {
+  border: 0.5rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px -30px rgb(120 63 30 / 25%);
+}
+
+.programSlot {
+  --action-space: 4.5rem;
+  --reveal-duration: 350ms;
+  --reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  min-width: 0;
+}
+
+.programCard {
+  display: block;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgb(15 23 42 / 6%);
+  transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+
+.programAction {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--reveal-duration) var(--reveal-ease), opacity 250ms ease;
+}
+
+.actionInner {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.programButton {
+  display: inline-flex;
+  height: 3rem;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  padding-inline: 1.25rem;
+  background: var(--training-ink);
+  color: #fff;
+  font-weight: 700;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.pagination button {
+  display: flex;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding-inline: 0.75rem;
+  background: #fff;
+  color: var(--training-ink);
+  cursor: pointer;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: var(--training-accent);
+}
+
+.pagination button[aria-current='page'] {
+  border-color: var(--training-accent);
+  background: var(--training-accent);
+  color: #fff;
+}
+
+.pagination button:disabled {
+  background: #e7e5e4;
+  color: #78716c;
+  cursor: default;
+}
+
+.offerCard {
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+  gap: 1.25rem;
+  border: 1px solid #e7e5e4;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  background: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .programSlot {
+    /* Swap this reserved space for the button so other rows do not jump. */
+    padding-block-end: var(--action-space);
+    transition: padding-block-end var(--reveal-duration) var(--reveal-ease);
+  }
+
+  .programSlot:has(.programCard:is(:hover, :focus-visible)) {
+    padding-block-end: 0;
+  }
+
+  .programCard {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .programAction {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+
+  .programCard:is(:hover, :focus-visible) {
+    background: #fff;
+    box-shadow: 0 12px 28px -12px rgb(15 23 42 / 20%);
+  }
+
+  .programCard:is(:hover, :focus-visible) .programAction {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .programSlot,
+  .programCard,
+  .programAction {
+    transition: none;
+  }
+}

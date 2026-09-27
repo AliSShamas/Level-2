@@ -1,4 +1,177 @@
-{"CoachingPage": {
+{"TrainingPage": {
+  "hero": {
+    "home": "Home",
+    "breadcrumbLabel": "Breadcrumb",
+    "title": "Training",
+    "subtitle": "Learning that actually changes something.",
+    "description": "Practical, research-informed training for organizations, institutions, and teams that are serious about development. Designed around your people, in Arabic, English, or French.",
+    "explore": "Explore Training",
+    "imageAlt": "A notebook and cups on a table during a focused learning conversation."
+  },
+  "whoThisIsFor": {
+    "title": "Who This Is For",
+    "description": "Training works best when the people in the room feel the content was built with them in mind. We design and deliver programs for:",
+    "audiences": {
+      "educators": "Educators and teachers seeking professional development that is reflective, practical, and immediately applicable",
+      "leaders": "School leaders and academic coordinators building leadership and instructional capacity",
+      "teams": "Teams in organizations, NGOs, and nonprofits investing in growth, communication, and resilience",
+      "youth": "Youth and emerging leaders developing the foundations of professional and personal effectiveness"
+    },
+    "closing": "If your organization wants to invest seriously in its people, with programs that respect their experience and meet them where they are, we are likely a good fit.",
+    "imageAlt": "A facilitator and colleagues sharing ideas around a table."
+  },
+  "whatToExpect": {
+    "title": "What to Expect",
+    "needs": "Good training begins with a question: <strong>what does this group actually need, and what would meaningful progress look like for them?</strong>",
+    "design": "Every program starts there. Before content is developed or delivered, we take time to understand <strong>your team, your goals, and the context in which you work</strong>. What participants receive is shaped by that understanding.",
+    "learning": "In the room, the approach is <strong>active, participatory, and grounded in how adults learn</strong>. Sessions challenge thinking and create opportunities to engage, reflect, and apply. Participants leave with something concrete to take into their work.",
+    "formats": "Programs are available as standalone workshops or multi-session series, in Arabic, English, French, or a bilingual format depending on your team's needs."
+  },
+  "catalog": {
+    "title": "Program Areas",
+    "description": "These are the core areas we work in. Each can become a standalone workshop or a longer program, and <strong>content is always adapted to your audience and context.</strong>",
+    "searchLabel": "Search training programs",
+    "searchPlaceholder": "Search programs",
+    "clearSearch": "Clear search",
+    "results": "Showing {from}–{to} of {total} programs",
+    "noResults": "No programs found.",
+    "emptyTitle": "No matching programs",
+    "emptyDescription": "Try a different topic or clear your search to see all program areas.",
+    "reset": "Show all programs",
+    "moreInfo": "More Info",
+    "paginationLabel": "Program pages",
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page {page}"
+  },
+  "detail": {
+    "eyebrow": "Training program",
+    "overview": "Training Program Overview",
+    "adapted": "This program can be shaped into a standalone workshop or a multi-session series. Content, format, and delivery language are agreed around your team's needs.",
+    "enquire": "Enquire Now",
+    "back": "All program areas"
+  },
+  "offer": {
+    "title": "The Offer",
+    "description": "Every training program starts with your team. Whether you are looking for a single workshop or a multi-session series, the goals, format, language, and content are agreed together before delivery.",
+    "discovery": {
+      "title": "Discovery Call",
+      "description": "We begin with a conversation about your team, your goals, and what a successful program would look like. It is a chance to explore your needs and whether the approach is a good fit."
+    },
+    "design": {
+      "title": "Program Design",
+      "description": "Once we share an understanding of your needs, we design the program around your context: content, format, duration, delivery language, and any preparation or follow-up that would add value."
+    },
+    "delivery": {
+      "title": "Delivery of Training",
+      "description": "Programs can be facilitated in person or online, in Arabic, English, or French, as a standalone workshop or a series. Group size and logistics are confirmed together in advance."
+    },
+    "start": {
+      "title": "Getting Started",
+      "description": "Use the contact form to share a brief overview of your team, your goals, and your preferred timing. From there, we can discuss the right next step."
+    },
+    "cta": "Get in touch"
+  },
+  "programs": {
+    "emotionalIntelligence": {
+      "title": "Emotional Intelligence in the Workplace",
+      "excerpt": "Understand your emotions and those of the people around you, and use that awareness to build stronger working relationships.",
+      "overview": "Understanding emotions is part of how we lead, communicate, and work together. This program explores self-awareness, emotional regulation, empathy, and the everyday choices that shape relationships at work. Through reflection and practical activities, participants learn to recognize emotional patterns, respond more thoughtfully under pressure, and approach conversations with greater awareness of themselves and others.",
+      "imageAlt": "Two wooden blocks showing a smiling and a neutral face on a sunlit office desk."
+    },
+    "leadership": {
+      "title": "Leadership from the Inside Out",
+      "excerpt": "Effective leadership begins with self-awareness, a clear sense of values, and the ability to turn intention into consistent action.",
+      "overview": "The most effective leaders bring more than task management to their work. They lead from a clearer understanding of their values, strengths, and impact on others. This program invites participants to explore their leadership identity, notice the habits that shape their decisions, and build greater consistency between what they believe and how they lead. Reflection and practical discussion connect personal insight with everyday leadership situations.",
+      "imageAlt": "A team leader and colleagues discussing their work around a table."
+    },
+    "wellbeing": {
+      "title": "Burnout, Boundaries, and Professional Wellbeing",
+      "excerpt": "Recognize patterns of overload, explore healthier boundaries, and develop more sustainable ways of working.",
+      "overview": "Sustainable performance requires space to notice pressure and respond to it. This program helps participants reflect on the demands of their work, recognize patterns of overload, and explore boundaries that support professional wellbeing. Practical conversations focus on priorities, expectations, communication, and everyday habits that make work more sustainable for individuals and teams.",
+      "imageAlt": "A professional taking a quiet pause beside a sunlit office window."
+    },
+    "communication": {
+      "title": "Communication That Connects",
+      "excerpt": "How we communicate shapes our relationships, credibility, and impact. Build the habits that help conversations create understanding.",
+      "overview": "How we communicate shapes our relationships, our credibility, and our impact. This program goes beyond technique to address the mindset behind effective communication: listening with intention, speaking with clarity, and navigating difficult conversations with confidence. Participants explore how assumptions and emotions influence their interactions, then practice approaches that build understanding and support more productive working relationships.",
+      "imageAlt": "Two professionals listening and speaking with each other in a bright room."
+    },
+    "learning": {
+      "title": "Accelerated Learning",
+      "excerpt": "Make learning more engaging and meaningful through reflection, participation, and opportunities to apply new ideas.",
+      "overview": "Learning becomes more powerful when participants are actively involved in making sense of new ideas. This program explores how to create experiences that connect attention, reflection, practice, and application. Participants consider how people learn, experiment with strategies that encourage active engagement, and identify ways to make learning more memorable and useful in their own context.",
+      "imageAlt": "An open notebook on a table during a shared learning conversation."
+    },
+    "growth": {
+      "title": "Personal Growth and Professional Clarity",
+      "excerpt": "Explore what matters to you, understand what may be holding you back, and identify a more intentional direction.",
+      "overview": "Knowing where you want to go is one part of growth; understanding your current patterns and priorities is another. This program creates space to reflect on values, strengths, assumptions, and the choices that shape professional life. Participants connect greater self-awareness with clearer goals and identify practical steps toward a direction that feels meaningful and realistic.",
+      "imageAlt": "A hand writing in a notebook beside a sunlit window."
+    },
+    "timeManagement": {
+      "title": "Time and Life Management",
+      "excerpt": "Manage priorities with greater intention and bring your daily choices into better alignment with your values.",
+      "overview": "Managing time well begins with understanding what deserves your attention. This program explores the connection between priorities, values, energy, and everyday decisions. Participants reflect on the habits and expectations that shape their schedules, identify sources of distraction or overload, and develop practical ways to plan, set boundaries, and make room for what matters in work and life.",
+      "imageAlt": "An analog clock, books, a plant, and an open planner on a wooden desk."
+    }
+  }
+},
+"ConsultingPage": {
+  "hero": {
+    "home": "Home",
+    "breadcrumbLabel": "Breadcrumb",
+    "title": "Consulting",
+    "subtitle": "When the challenge is bigger than one person.",
+    "description": "Strategic consulting for educational institutions, organizations, and nonprofits that are ready to move forward with clarity, rigor, and a deeper understanding of how change happens.",
+    "explore": "Explore Consulting",
+    "contact": "Start a conversation",
+    "imageAlt": "A team discussing ideas and working together around a table."
+  },
+  "whoThisIsFor": {
+    "title": "Who This Is For",
+    "description": "Consulting is the right fit when the challenge is at the system level. We work with organizations navigating complexity that need a partner who understands both the landscape and the people within it.",
+    "intro": "You may be in the right place if your organization is:",
+    "situations": {
+      "change": "Navigating institutional change, reform, or restructuring",
+      "leadership": "Strengthening leadership at one or more levels",
+      "learning": "Reviewing or redesigning curriculum, programs, or learning systems",
+      "capacity": "Building internal capacity for sustainable development",
+      "strategy": "Facing a gap between strategy and what is happening on the ground"
+    },
+    "audience": "This work is for schools, universities, educational institutions, NGOs, nonprofits, and public organizations in Lebanon and the Arab region.",
+    "imageAlt": "An overhead view of a working conversation, with a notebook and cups on the table."
+  },
+  "whatToExpect": {
+    "title": "What to Expect",
+    "partnership": "Consulting is a <strong>working partnership</strong>, shaped by your context and grounded in a commitment to what is genuinely useful.",
+    "listening": "Every engagement begins with <strong>listening</strong>. Before making recommendations, we take time to understand your organization: its history, its people, its pressures, and what real progress would look like for you.",
+    "approach": "From there, the work is tailored. It might include an organizational or needs assessment, leadership workshops, facilitated sessions with teams, curriculum or program review, or a structured series of advisory conversations. <strong>The scope, the pace, and the deliverables are defined together.</strong>",
+    "commitment": "What stays constant across every engagement is rigor, honesty, and a focus on <strong>what is workable</strong> in everyday practice."
+  },
+  "offer": {
+    "title": "The Offer",
+    "description": "Every consulting engagement is built around your specific situation. We begin with a real conversation, then shape the work around your context, what is achievable, and outcomes that last beyond the engagement itself.",
+    "discovery": {
+      "title": "Discovery Call",
+      "description": "We begin with a discovery conversation to understand your organization's situation, what you hope to achieve, and whether there is a good fit. It is a space to explore your questions before deciding on the next step."
+    },
+    "design": {
+      "title": "Engagement Design",
+      "description": "If we decide to work together, we develop a scope of work tailored to your needs. The focus, approach, and deliverables are built from what you have shared and agreed together."
+    },
+    "work": {
+      "title": "The Work Itself",
+      "description": "Depending on the engagement, the work may include needs assessment, advisory sessions, workshops, facilitated group processes, written recommendations, or a combination of these. Engagements vary in duration and depth."
+    },
+    "start": {
+      "title": "Getting Started",
+      "description": "Reach out through the contact form with a brief description of your organization and what you are hoping to address. From there, we can begin a conversation about the support you need."
+    },
+    "cta": "Get in touch"
+  }
+},
+"CoachingPage": {
   "hero": {
     "eyebrow": "Coaching",
     "title": "Create space for clarity, growth, and meaningful change.",
