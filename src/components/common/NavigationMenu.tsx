@@ -17,9 +17,9 @@ const primaryLinks = [
 ] as const;
 
 const secondaryLinks = [
-  {href: '/about', translationKey: 'about'},
+  {href: '/#about', translationKey: 'about'},
   {href: '/media', translationKey: 'media'},
-  {href: '/contact', translationKey: 'contact'}
+  {href: '/#contact', translationKey: 'contact'}
 ] as const;
 
 export default function NavigationMenu() {

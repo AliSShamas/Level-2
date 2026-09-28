@@ -37,6 +37,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      data-scroll-behavior="smooth"
     >
       <body className={`${latinFont.variable} ${arabicFont.variable}`}>
         <NextIntlClientProvider>

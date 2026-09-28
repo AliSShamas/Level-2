@@ -30,7 +30,7 @@ export default function IntroSection() {
           </p>
 
           <Link
-            href="/contact"
+            href="#contact"
             className="group mt-10 inline-flex items-center gap-2 rounded-xl bg-green-700 px-7 py-4 font-semibold text-white! transition-[background-color,box-shadow,translate] duration-200 ease-out hover:bg-green-800 hover:shadow-lg focus-visible:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700 motion-safe:hover:-translate-y-0.5 motion-safe:focus-visible:-translate-y-0.5"
           >
             {t('cta')}

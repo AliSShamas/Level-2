@@ -7,7 +7,7 @@ export default function AboutPreview() {
   const t = useTranslations('HomePage.aboutPreview');
 
   return (
-    <section data-reveal-group className="relative overflow-hidden bg-emerald-950 px-6 py-20 text-white md:py-28">
+    <section id="about" data-reveal-group className="relative scroll-mt-28 overflow-hidden bg-emerald-950 px-6 py-20 text-white md:py-28">
       <div
         aria-hidden="true"
         className="absolute -end-32 -top-24 size-96 rounded-full border-[70px] border-emerald-700/40"

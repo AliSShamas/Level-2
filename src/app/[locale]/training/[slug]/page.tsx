@@ -14,7 +14,7 @@ type ProgramPageProps = {params: Promise<{locale: string; slug: string}>};
 // The locale layout supplies en/ar; this supplies the seven slugs for each locale.
 export function generateStaticParams() {
   return trainingPrograms.map((program) => ({slug: program.slug}));
-}
+}t
 
 export async function generateMetadata({params}: ProgramPageProps): Promise<Metadata> {
   const {locale, slug} = await params;

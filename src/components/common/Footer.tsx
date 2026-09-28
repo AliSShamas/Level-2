@@ -54,11 +54,11 @@ export default function Footer() {
           </h2>
 
           <nav className="mt-5 flex flex-col gap-3 text-[#536451]">
-            <Link href="/about">
+            <Link href="/#about">
               {t('about')}
             </Link>
 
-            <Link href="/contact">
+            <Link href="/#contact">
               {t('contact')}
             </Link>
 
