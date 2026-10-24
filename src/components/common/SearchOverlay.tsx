@@ -136,11 +136,12 @@ export default function SearchOverlay() {
 
             <div className="mx-auto mt-24 max-w-4xl">
               <div className="relative">
-                <Search className="absolute start-0 top-1/2 size-6 -translate-y-1/2 text-slate-400" />
+                <Search aria-hidden="true" className="absolute start-0 top-1/2 size-6 -translate-y-1/2 text-slate-400" />
 
                 <input
                   ref={inputRef}
                   type="search"
+                  aria-label={t('searchTitle')}
                   placeholder={t('searchPlaceholder')}
                   className="w-full border-b border-slate-300 bg-transparent py-5 ps-10 pe-4 text-2xl outline-none transition-colors duration-200 ease-out focus:border-slate-950 md:text-4xl"
                 />

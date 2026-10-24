@@ -1,4 +1,5 @@
 {"TrainingPage": {
+  
   "hero": {
     "home": "Home",
     "breadcrumbLabel": "Breadcrumb",
@@ -116,6 +117,11 @@
       "imageAlt": "An analog clock, books, a plant, and an open planner on a wooden desk."
     }
   }
+},
+"MediaPage": {
+  "eyebrow": "Media Center",
+  "title": "Read. Watch. Listen.",
+  "description": "Explore articles, podcasts, and videos designed to spark reflection, challenge thinking, and support meaningful growth."
 },
 "ConsultingPage": {
   "hero": {
