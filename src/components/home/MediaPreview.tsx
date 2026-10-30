@@ -18,6 +18,31 @@ import styles from './MediaPreview.module.css';
 
 type Filter = 'all' | MediaType;
 
+export type SanityArticleCard = {
+  _id: string;
+  title: string;
+  excerpt: string;
+  slug: string;
+  image: string;
+  publishedAt: string;
+};
+
+export type SanityPodcastCard = {
+  _id: string;
+  title: string;
+  excerpt: string;
+  description: string;
+  slug: string;
+  image: string;
+  publishedAt: string;
+  audioUrl: string;
+};
+
+type MediaPreviewProps = {
+  articles: SanityArticleCard[];
+  podcasts: SanityPodcastCard[];
+};
+
 const filters: Filter[] = [
   'all',
   'podcast',
@@ -31,16 +56,47 @@ const mediaIcons = {
   video: Play
 };
 
-export default function MediaPreview() {
+export default function MediaPreview({
+  articles,
+  podcasts
+}: MediaPreviewProps) {
   const [activeFilter, setActiveFilter] =
     useState<Filter>('all');
 
   const t = useTranslations('HomePage.mediaPreview');
 
+  const localVideos = mediaItems
+    .filter((item) => item.type === 'video')
+    .map((item) => ({
+      slug: item.slug,
+      image: item.image,
+      type: 'video' as const,
+      title: t(`${item.translationKey}.title`),
+      excerpt: t(`${item.translationKey}.excerpt`)
+    }));
+
+  const allItems = [
+    ...articles.map((article) => ({
+      slug: article.slug,
+      image: article.image,
+      type: 'article' as const,
+      title: article.title,
+      excerpt: article.excerpt
+    })),
+    ...podcasts.map((podcast) => ({
+      slug: podcast.slug,
+      image: podcast.image,
+      type: 'podcast' as const,
+      title: podcast.title,
+      excerpt: podcast.excerpt
+    })),
+    ...localVideos
+  ];
+
   const filteredItems =
     activeFilter === 'all'
-      ? mediaItems
-      : mediaItems.filter(
+      ? allItems
+      : allItems.filter(
           (item) => item.type === activeFilter
         );
 
@@ -96,22 +152,28 @@ export default function MediaPreview() {
         <div className="mt-12 grid items-start gap-6 md:grid-cols-3">
           {filteredItems.map((item) => {
             const Icon = mediaIcons[item.type];
+            const href =
+              item.type === 'article'
+                ? `/media/articles/${item.slug}`
+                : item.type === 'podcast'
+                  ? `/media/podcasts/${item.slug}`
+                  : '/media';
 
             return (
               <article
                 data-reveal
-                key={item.slug}
+                key={`${item.type}-${item.slug}`}
                 className={styles.item}
               >
                 <Link
-                  href="/media"
-                  aria-labelledby={`media-${item.slug}`}
+                  href={href}
+                  aria-labelledby={`media-${item.type}-${item.slug}`}
                   className={styles.card}
                 >
                   <div className="relative aspect-[16/10] overflow-hidden rounded-t-3xl bg-stone-200">
                     <Image
                       src={item.image}
-                      alt=""
+                      alt={item.title}
                       fill
                       sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1328px) calc((100vw - 96px) / 3), 410px"
                       className="object-cover"
@@ -123,12 +185,12 @@ export default function MediaPreview() {
                   </div>
 
                   <div className="p-6 lg:p-7">
-                    <h3 id={`media-${item.slug}`} className="text-2xl font-semibold tracking-tight text-slate-900">
-                      {t(`${item.translationKey}.title`)}
+                    <h3 id={`media-${item.type}-${item.slug}`} className="text-2xl font-semibold tracking-tight text-slate-900">
+                      {item.title}
                     </h3>
 
                     <p className="mt-4 leading-7 text-slate-600">
-                      {t(`${item.translationKey}.excerpt`)}
+                      {item.excerpt}
                     </p>
 
                     <div className={styles.action}>

@@ -1,6 +1,5 @@
-
 'use client';
-import {Link} from '@/i18n/navigation';
+
 import {useState} from 'react';
 import Image from 'next/image';
 import {
@@ -10,10 +9,36 @@ import {
 } from 'lucide-react';
 import {useTranslations} from 'next-intl';
 
+import {Link} from '@/i18n/navigation';
 import {mediaItems} from '@/data/media';
 import type {MediaType} from '@/types/media';
 
 type Filter = 'all' | MediaType;
+
+type SanityArticleCard = {
+  _id: string;
+  title: string;
+  excerpt: string;
+  slug: string;
+  image: string;
+  publishedAt: string;
+};
+
+type SanityPodcastCard = {
+  _id: string;
+  title: string;
+  excerpt: string;
+  description: string;
+  slug: string;
+  image: string;
+  publishedAt: string;
+  audioUrl: string;
+};
+
+type MediaListingProps = {
+  articles: SanityArticleCard[];
+  podcasts: SanityPodcastCard[];
+};
 
 const filters: Filter[] = [
   'all',
@@ -28,24 +53,60 @@ const mediaIcons = {
   video: Play
 };
 
-export default function MediaListing() {
+export default function MediaListing({
+  articles,
+  podcasts
+}: MediaListingProps) {
   const [activeFilter, setActiveFilter] =
     useState<Filter>('all');
 
   const t = useTranslations('HomePage.mediaPreview');
 
+  const localMediaItems = mediaItems
+    .filter((item) => item.type === 'video')
+    .map((item) => ({
+      slug: item.slug,
+      image: item.image,
+      type: 'video' as const,
+      date: item.date,
+      title: t(`${item.translationKey}.title`),
+      excerpt: t(`${item.translationKey}.excerpt`)
+    }));
+
+  const sanityArticles = articles.map((article) => ({
+    slug: article.slug,
+    image: article.image,
+    type: 'article' as const,
+    date: article.publishedAt,
+    title: article.title,
+    excerpt: article.excerpt
+  }));
+
+  const sanityPodcasts = podcasts.map((podcast) => ({
+    slug: podcast.slug,
+    image: podcast.image,
+    type: 'podcast' as const,
+    date: podcast.publishedAt,
+    title: podcast.title,
+    excerpt: podcast.excerpt
+  }));
+
+  const allItems = [
+    ...sanityArticles,
+    ...sanityPodcasts,
+    ...localMediaItems
+  ];
+
   const filteredItems =
     activeFilter === 'all'
-      ? mediaItems
-      : mediaItems.filter(
+      ? allItems
+      : allItems.filter(
           (item) => item.type === activeFilter
         );
 
   return (
     <section className="bg-stone-100 px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
-
-     
         <div className="flex flex-wrap gap-3">
           {filters.map((filter) => {
             const active =
@@ -87,21 +148,21 @@ export default function MediaListing() {
           })}
         </div>
 
-       
         <div className="mt-12 grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item) => {
             const Icon =
               mediaIcons[item.type];
-              const href =
-         item.type === 'article'
-         ? `/media/articles/${item.slug}`
-         : item.type === 'podcast'
-         ? `/media/podcasts/${item.slug}`
-         : `/media/videos/${item.slug}`;
+
+            const href =
+              item.type === 'article'
+                ? `/media/articles/${item.slug}`
+                : item.type === 'podcast'
+                  ? `/media/podcasts/${item.slug}`
+                  : '/media';
 
             return (
               <article
-                key={item.slug}
+                key={`${item.type}-${item.slug}`}
                 className="
                   overflow-hidden rounded-3xl
                   bg-white shadow-sm
@@ -109,63 +170,57 @@ export default function MediaListing() {
                   hover:-translate-y-1
                   hover:shadow-lg
                 "
-              > 
-        
-              <Link href={href}>
-  
-                <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
-                  <Image
-                    src={item.image}
-                    alt=""
-                    fill
-                    sizes="
-                      (max-width: 767px)
-                      calc(100vw - 48px),
-                      (max-width: 1023px)
-                      calc((100vw - 72px) / 2),
-                      410px
-                    "
-                    className="
-                      object-cover
-                      transition duration-300
-                      hover:scale-105
-                    "
-                  />
-
-                  <div
-                    className="
-                      absolute start-4 top-4
-                      inline-flex items-center gap-2
-                      rounded-full
-                      bg-white/95
-                      px-3.5 py-2
-                      text-xs font-semibold
-                      text-green-800
-                      shadow-sm
-                    "
-                  >
-                    <Icon
-                      aria-hidden="true"
-                      className="size-4"
+              >
+                <Link href={href}>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="
+                        (max-width: 767px)
+                        calc(100vw - 48px),
+                        (max-width: 1023px)
+                        calc((100vw - 72px) / 2),
+                        410px
+                      "
+                      className="
+                        object-cover
+                        transition duration-300
+                        hover:scale-105
+                      "
                     />
 
-                    {t(item.type)}
+                    <div
+                      className="
+                        absolute start-4 top-4
+                        inline-flex items-center gap-2
+                        rounded-full
+                        bg-white/95
+                        px-3.5 py-2
+                        text-xs font-semibold
+                        text-green-800
+                        shadow-sm
+                      "
+                    >
+                      <Icon
+                        aria-hidden="true"
+                        className="size-4"
+                      />
+
+                      {t(item.type)}
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-6 lg:p-7">
-                  <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
-                    {t(
-                      `${item.translationKey}.title`
-                    )}
-                  </h2>
+                  <div className="p-6 lg:p-7">
+                    <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
+                      {item.title}
+                    </h2>
 
-                  <p className="mt-4 leading-7 text-slate-600">
-                    {t(
-                      `${item.translationKey}.excerpt`
-                    )}
-                  </p>
-                </div>
+                    <p className="mt-4 leading-7 text-slate-600">
+                      {item.excerpt}
+                    </p>
+                  </div>
                 </Link>
               </article>
             );

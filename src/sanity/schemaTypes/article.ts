@@ -35,6 +35,21 @@ export const articleType = defineType({
     }),
 
     defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    }),
+
+    defineField({
+      name: 'publishedAt',
+      title: 'Published At',
+      type: 'datetime'
+    }),
+
+    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'object',
